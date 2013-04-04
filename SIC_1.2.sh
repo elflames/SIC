@@ -3213,7 +3213,7 @@ function create_Image {
 				deviceName=`diskutil info "/Volumes/${sourceVolume}" | grep "Device Node:" | awk -F " " '{print $NF}'`
 				diskutil unmount force "/Volumes/${sourceVolume}" &>/dev/null
 			else
-				deviceName=`diskutil info "/Volumes/${sourceVolume}" | grep "Part Of Whole:" | awk -F " " '{print $NF}'`
+				deviceName=`diskutil info "/Volumes/${sourceVolume}" | grep "Part of Whole:" | awk -F " " '{print $NF}'`
 				deviceName="/dev/${deviceName}"
 				diskutil unmountDisk force "/Volumes/${sourceVolume}" &>/dev/null
 			fi
